@@ -1,3 +1,47 @@
+\subsection{Measurements}
+
+A dual-stacked user when attempting to connect to a dual-stacked service
+traditionally prefers connecting over IPv6. This is because in POSIX systems,
+the internal domain name resolution system call \texttt{getaddrinfo(\ldots)}
+\cite{rfc3493} returns the list of addresses in an order that prioritizes an
+IPv6-upgrade path \cite{rfc3484}. The dictated order can dramatically reduce
+the application responsiveness in situations where IPv6 connectivity is
+broken. This is because, the attempt to connect over an IPv4 address will take
+place only when the IPv6 connection attempt has timed out, which can be in the
+order of seconds.
+
+This noticeable degraded user experience can be subverted by making
+applications apply the happy eyeballs algorithm \cite{rfc6555}. The algorithm
+recommends that a dual-stacked application try resolving a dual-stacked
+service for both IPv4 and IPv6 addresses at once. If the resolver returns both
+addresses, the application must try a TCP \texttt{connect(\ldots)} to both the
+resolved addresses and pick the one that completes first.
+
+In this pursuit, to determine whether applications will use IPv4 or IPv6 on a
+dual stacked service, we developed \texttt{happy}, a simple TCP happy eyeballs
+probing tool. It uses non-blocking \texttt{connect(\ldots)} calls to establish
+concurrent connections to a number of possible endpoints of a service. The
+tool does not check whether the endpoints of a given target all provide the
+same service. Hence, it is possible to impact the results by setting up fake
+servers that do not provide the service tested and which are designed and
+deployed with the only purpose to provide fast connection setup times.
+
+We have cross-compiled \texttt{happy} for the OpenWRT \cite{fainelli:2008}
+platform. As a result, the tool can now be run on widely deployed SamKnows
+probes \footnote{\url{http://www.samknows.com}}, and the collected measurement
+data can be further analysed. In order to ascertain the value in this
+exercise, we prepared an internal test-bed of multiple measurement points. The
+measurement points have different flavors of IPv4 and IPv6 connectivity
+ranging from native IPv4, native IPv6, 6in4, Teredo \cite{rfc4380} and
+tunnelled IPv4.
+
+\begin{figure}[t]
+\centering
+\includegraphics*[width=1.0\linewidth]{figures/happy-servers-mean-std}
+\caption{servers vs \texttt{\{mean, std\}}}
+\label{fig:v6cloud}
+\end{figure}
+
 \begin{figure}
   \begin{minipage}[h]{0.50\textwidth}
     \centering
@@ -10,9 +54,4 @@
 \caption{\label{fig:v4-v6-cloud}IPv4 and IPv6 aggregation cloud}
 \end{figure}
 
-\begin{figure}[t]
-\centering
-\includegraphics*[width=1.0\linewidth]{figures/happy-servers-mean-std}
-\caption{servers vs \texttt{\{mean, std\}}}
-\label{fig:v6cloud}
-\end{figure}
+\subsection{Local Management}
