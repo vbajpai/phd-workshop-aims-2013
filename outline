@@ -1,0 +1,20 @@
+- introduction
+  - description of research problem
+    * why is the problem hard?
+  - chosen approach
+    * why is the approach novel?
+- related work
+- preliminary results
+  * measurements
+    * happy, data collection, data analysis
+       - alexa top sites
+       - similarity search
+  * network management
+    * netconf server on SK box
+    * ncclient
+- future work
+  * NAT detection
+  * YANG data models
+  * NETCONF over TLS
+  * RESTful YANG API
+- conclusion
