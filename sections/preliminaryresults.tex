@@ -10,6 +10,13 @@ broken. This is because, the attempt to connect over an IPv4 address will take
 place only when the IPv6 connection attempt has timed out, which can be in the
 order of seconds.
 
+\begin{figure}[t]
+\centering
+\includegraphics*[width=1.0\linewidth]{figures/happy-servers-mean-std}
+\caption{servers vs \texttt{\{mean, std\}}}
+\label{fig:happy-servers-mean-std}
+\end{figure}
+
 This noticeable degraded user experience can be subverted by making
 applications apply the happy eyeballs algorithm \cite{rfc6555}. The algorithm
 recommends that a dual-stacked application try resolving a dual-stacked
@@ -52,13 +59,6 @@ their \ac{RIR} seems to indicate that major portion of the services map to a
 cloud of an address block owned by popular organizations like Google and
 Akamai Technologies as shown in Fig. \ref{fig:v4-v6-cloud}.
 
-\begin{figure}[t]
-\centering
-\includegraphics*[width=1.0\linewidth]{figures/happy-servers-mean-std}
-\caption{servers vs \texttt{\{mean, std\}}}
-\label{fig:happy-servers-mean-std}
-\end{figure}
-
 \begin{figure}
   \begin{minipage}[h]{0.50\textwidth}
     \centering
@@ -72,3 +72,16 @@ Akamai Technologies as shown in Fig. \ref{fig:v4-v6-cloud}.
 \end{figure}
 
 \subsection{Local Management}
+
+As much as it is important to define and implement new tests on these
+measurement infrastructure, it is also equally pertinent to not only be able
+to install, update and delete these tests but also configure the entire suite
+of probes using a standardized protocol over the network. The \ac{NETCONF}
+protocol \cite{rfc6241} is particularly designed to cater to this problem.
+Towards this end, we have built a \ac{NETCONF} server for the OpenWRT platform
+using the \texttt{libnetconf}
+\footnote{\url{http://code.google.com/p/libnetconf/}} library and tested the
+implementation using our NETCONF Python API \texttt{ncclient}
+\cite{sbhushan:2009}. This will allow automated deployment of measurement
+tests and remote management of their startup configurations.
+
