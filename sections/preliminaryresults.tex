@@ -34,15 +34,16 @@ setting up fake servers that do not provide the service tested and which are
 designed and deployed with the only purpose to provide fast connection setup
 times.
 
-We have cross-compiled \texttt{happy} for the OpenWRT \cite{fainelli:2008}
-platform. As a result, the tool can now be run on widely deployed SamKnows
-probes \footnote{\url{http://www.samknows.com}}, and the collected measurement
-data can be further analysed. In order to ascertain the value in this
-exercise, we prepared an internal test-bed of multiple measurement points. The
-measurement points have different flavors of IPv4 and IPv6 connectivity
-ranging from native IPv4, native IPv6, IPv6 tunnel broker endpoints
-\cite{rfc3053}, Teredo \cite{rfc4380} and tunnelled IPv4. We used the top 100
-domains compiled by Hurricane Electric Internet Services
+We have cross-compiled \texttt{happy} for the OpenWRT
+\footnote{\url{https://openwrt.org}} platform. As a result, the tool can now
+be run on widely deployed SamKnows probes
+\footnote{\url{http://www.samknows.com}}, and the collected measurement data
+can be further analysed. In order to ascertain the value in this exercise, we
+prepared an internal test-bed of multiple measurement points. The measurement
+points have different flavors of IPv4 and IPv6 connectivity ranging from
+native IPv4, native IPv6, IPv6 tunnel broker endpoints \cite{rfc3053}, Teredo
+\cite{rfc4380} and tunnelled IPv4. We used the top 100 domains compiled by
+Hurricane Electric Internet Services
 \footnote{\url{http://bgp.he.net/ipv6-progress-report.cgi}} and ran
 \texttt{happy} on the set of dual-stack services represented by these domains.
 A preliminary result comparing the time (mean and standard deviation) to make

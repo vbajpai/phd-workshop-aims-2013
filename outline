@@ -13,13 +13,12 @@
     * netconf server on SK box
     * ncclient
 - future work
-  * IPv6 transition and IPv6 performance relative to IPv6
+  * IPv6 transition and IPv6 performance relative to IPv4
   * deployed of CGNs and n-layer NATs
   * centralization of services on core content delivery and cloud platforms
     (akamai effect)
   * regionalization of the network (to what extend does the network experience
     depend on localization information)
-  * NAT detection
   * YANG data models
   * NETCONF over TLS
   * RESTful YANG API
