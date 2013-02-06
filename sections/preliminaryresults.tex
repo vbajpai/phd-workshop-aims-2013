@@ -1,3 +1,15 @@
+\begin{figure}
+  \begin{minipage}[t]{0.50\textwidth}
+    \centering
+    \resizebox*{1.0\textwidth}{!}{\includegraphics{figures/happy-v4-v6-compete-0ms}}
+  \end{minipage}
+  \begin{minipage}[t]{0.50\textwidth}
+    \centering
+    \resizebox*{1.0\textwidth}{!}{\includegraphics{figures/happy-v4-v6-compete-300ms}}
+  \end{minipage}
+\caption{\label{fig:happy-v4-v6-compete}IPv4 and IPv6 Happy Eyeball Competition}
+\end{figure}
+
 A dual-stacked user when attempting to connect to a dual-stacked service
 traditionally prefers connecting over IPv6. This is because in POSIX systems,
 the internal domain name resolution system call \texttt{getaddrinfo(\ldots)}
@@ -7,18 +19,6 @@ the application responsiveness in situations where IPv6 connectivity is
 broken. This is because, the attempt to connect over an IPv4 address will take
 place only when the IPv6 connection attempt has timed out, which can be in the
 order of seconds.
-
-\begin{figure}
-  \begin{minipage}[h]{0.50\textwidth}
-    \centering
-    \resizebox*{1.0\textwidth}{!}{\includegraphics{figures/happy-v4-v6-compete-0ms}}
-  \end{minipage}
-  \begin{minipage}[h]{0.50\textwidth}
-    \centering
-    \resizebox*{1.0\textwidth}{!}{\includegraphics{figures/happy-v4-v6-compete-300ms}}
-  \end{minipage}
-\caption{\label{fig:happy-v4-v6-compete}IPv4 and IPv6 Happy Eyeball Competition}
-\end{figure}
 
 This noticeable degraded user experience can be subverted by making
 applications apply the happy eyeballs algorithm \cite{rfc6555}. The algorithm
@@ -50,6 +50,18 @@ Hurricane Electric Internet Services
 \footnote{\url{http://bgp.he.net/ipv6-progress-report.cgi}} and ran
 \texttt{happy} on the set of dual-stack services represented by these domains.
 
+\begin{figure}
+  \begin{minipage}[t]{0.50\textwidth}
+    \centering
+    \resizebox*{1.0\textwidth}{!}{\includegraphics{figures/happy-v4cloud}}
+  \end{minipage}
+  \begin{minipage}[t]{0.50\textwidth}
+    \centering
+    \resizebox*{1.0\textwidth}{!}{\includegraphics{figures/happy-v6cloud}}
+  \end{minipage}
+\caption{\label{fig:v4-v6-cloud}IPv4 and IPv6 aggregation cloud}
+\end{figure}
+
 A preliminary result comparing the preference of a happy-eyeballed application
 to IPv6 and IPv4 from one of our measurement points is shown in Fig.
 \ref{fig:happy-v4-v6-compete}. The measurement point represented in this plot
@@ -66,18 +78,6 @@ block.  Digging through the \texttt{whois} information for each of the
 endpoints from their \ac{RIR} seems to indicate that major portion of the
 services map to a cloud of an address block owned by popular organizations
 like Google and Akamai Technologies as shown in Fig.  \ref{fig:v4-v6-cloud}.
-
-\begin{figure}
-  \begin{minipage}[h]{0.50\textwidth}
-    \centering
-    \resizebox*{1.0\textwidth}{!}{\includegraphics{figures/happy-v4cloud}}
-  \end{minipage}
-  \begin{minipage}[h]{0.50\textwidth}
-    \centering
-    \resizebox*{1.0\textwidth}{!}{\includegraphics{figures/happy-v6cloud}}
-  \end{minipage}
-\caption{\label{fig:v4-v6-cloud}IPv4 and IPv6 aggregation cloud}
-\end{figure}
 
 %As much as it is important to define and implement new tests on these
 %measurement infrastructure, it is also equally pertinent to not only be able
