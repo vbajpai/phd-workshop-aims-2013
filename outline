@@ -4,6 +4,14 @@
   - chosen approach
     * why is the approach novel?
 - related work
+    * measurement platforms
+      * samknows
+      * ripe
+      * project bismark
+      * berkeley' netalyzer
+      * project glasnot
+      * google's measurement lab
+    * studies using the measurement platform
 - preliminary results
   * measurements
     * happy, data collection, data analysis
