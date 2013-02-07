@@ -12,15 +12,14 @@
 \caption{\label{fig:happy-v4-v6-compete}IPv4 and IPv6 Happy Eyeball Competition} 
 \end{figure}
 
-A dual-stacked user when attempting to connect to a dual-stacked service
-traditionally prefers connecting over IPv6. This is because in POSIX systems,
-the domain name resolution system call \texttt{getaddrinfo(\ldots)} returns a
-list of endpoints in an order that prioritizes an IPv6-upgrade path
-\cite{rfc6724}. The dictated order can dramatically reduce the application
-responsiveness in situations where IPv6 connectivity is broken. This is
-because, the attempt to connect over an IPv4 endpoint will take place only
-when the IPv6 connection attempt has timed out, which can be in the order of
-seconds.
+A user when attempting to connect to a dual-stacked web service prefers
+connecting over IPv6. This is because in POSIX systems, the domain name
+resolution system call \texttt{getaddrinfo(\ldots)} returns a list of
+endpoints in an order that prioritizes an IPv6-upgrade path \cite{rfc6724}.
+The dictated order can dramatically reduce the application responsiveness in
+situations where IPv6 connectivity is broken. This is because, the attempt to
+connect over an IPv4 endpoint will take place only when the IPv6 connection
+attempt has timed out, which can be in the order of seconds.
 
 \begin{figure}[t]
   \begin{minipage}[t]{0.50\textwidth}
@@ -48,22 +47,22 @@ address family (usually IPv6) by the order of 300ms though.
 
 In this pursuit, to determine whether applications will use IPv4 or IPv6 on a
 dual stacked service, we developed \texttt{happy}, a simple TCP happy eyeballs
-probing tool. It uses non-blocking \texttt{connect(\ldots)} calls to establish
-concurrent connections to a number of possible endpoints of a service.
+probing tool. It uses non-blocking \texttt{connect(\ldots)} calls to
+concurrently establish connections to all the endpoints of a service.
 %The tool, however, does not check whether the endpoints of a given target all
 %provide the same service. Hence, it is possible to impact the results by
 %setting up fake servers that do not provide the service tested and which are
 %designed and deployed with the only purpose to provide fast connection setup
 %times and redirect services.
-We have cross-compiled \texttt{happy} for the OpenWRT
-\footnote{\url{https://openwrt.org}} platform. As a result, the tool can now
-be run on widely deployed SamKnows probes and the collected measurement data
-can be further analysed. In order to ascertain the value in this exercise, we
-prepared an internal test-bed of multiple measurement points. The measurement
-points have different flavors of IPv4 and IPv6 connectivity ranging from
-native IPv4, native IPv6, IPv6 tunnel broker endpoints, Teredo and tunnelled
-IPv4. We used the top 100 DNS names compiled by Hurricane Electric Internet
-Services \footnote{\url{http://bgp.he.net/ipv6-progress-report.cgi}} and ran
+We have cross-compiled \texttt{happy} for the
+OpenWRT\footnote{\url{https://openwrt.org}} platform, so that the tool can now
+be run on widely deployed SamKnows probes. In order to ascertain the value in
+this approach and develop data analysis tools, we prepared an internal
+test-bed of multiple measurement points. The measurement points have different
+flavors of IPv4 and IPv6 connectivity ranging from native IPv4, native IPv6,
+IPv6 tunnel broker endpoints, Teredo and tunnelled IPv4. We used the top 100
+DNS names compiled by Hurricane Electric Internet
+Services\footnote{\url{http://bgp.he.net/ipv6-progress-report.cgi}} and ran
 \texttt{happy} on the set of dual-stack services represented by these DNS
 names.
 
@@ -76,7 +75,9 @@ names.
     \centering
     \resizebox*{1.0\textwidth}{!}{\includegraphics{figures/happy-v6cloud}}
   \end{minipage}
-\caption{\label{fig:v4-v6-cloud}IPv4 and IPv6 aggregation cloud}
+  \caption{\label{fig:v4-v6-cloud}An IPv4 and IPv6 aggregation cloud depicting
+how most of the services centralize on core content delivery networks and
+major cloud platforms}
 \end{figure}
 
 A preliminary result comparing the preference of a happy-eyeballed application
@@ -86,17 +87,18 @@ prevents IPv6 access to Facebook, with only a 20\% chance to get to Google
 related services over a Teredo Tunnel. The results look more promising on a
 native IPv6 connection. It is important to note that adhering to the happy
 eyeballs recommendation, IPv6 endpoints are allowed a 300ms chance to succeed.
-A result comparing the time (mean and standard deviation) to make a TCP
-connection to each of the services from the same measurement points shown in
-Fig. \ref{fig:happy-v4-v6-mean-std}. The initial results show higher time
+A result comparing the time (mean and standard deviation) to establish a TCP
+connection to each of the services from the same measurement points is shown
+in Fig. \ref{fig:happy-v4-v6-mean-std}. The initial results show higher time
 variances when connections are made over IPv6. In addition, it appears, some
-of the related (and few of the unrelated) services show similar preferences.
-These services either resolve to the same endpoint or a set of endpoints that
-belong to the same allocated endpoint. Digging through the \texttt{whois}
-information for each of the endpoints from their \ac{RIR} seems to indicate
-that major portion of the services map to allocated prefixes owned by popular
-organizations like Google and Akamai Technologies as shown in Fig.
-\ref{fig:v4-v6-cloud}.
+of the related (and few of the unrelated) services show very similar
+performances.  These services either resolve to the same endpoint or a set of
+endpoints that belong to the same allocated prefix. Digging through the
+\texttt{whois} information for each of the endpoints from their \ac{RIR} seems
+to indicate that major portion of the services map to allocated prefixes owned
+by popular organizations like Google and Akamai Technologies as shown in Fig.
+\ref{fig:v4-v6-cloud}\footnote{A full resolution image is available at
+  \url{https://gist.github.com/vbajpai/4730696}}
 
 %As much as it is important to define and implement new tests on these
 %measurement infrastructure, it is also equally pertinent to not only be able

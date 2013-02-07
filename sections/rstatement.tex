@@ -1,46 +1,47 @@
 An interest to understand the evolution of the Internet from the user' vantage
 point started with establishing techniques to remotely probe the broadband
-links. Dischinger \emph{et al.} in \cite{dischinger:2007} for instance, inject
-packet trains and use the responses received from gateway to infer the
-broadband link characteristics. This led to development of a number of
-software-based solutions, \texttt{netalyzr} \cite{kreibich:2010}, for
-instance, that require explicit interactions with the broadband consumer.
-Recently, the requirement for accurate measurements, coupled with \ac{FCC}'
-initiated efforts to define data-driven standards has led to the deployment of
-a number of large-scale measurement platforms that perform measurements using
-dedicated hardware probes not only from within the ISP' network but also
-directly from the home gateway. 
+access network. Dischinger \emph{et al.} in \cite{dischinger:2007}, for
+instance, inject packet trains and use the responses received from residential
+gateway to infer the broadband link characteristics. This led to the
+development of a number of software-based solutions such as \texttt{netalyzr}
+\cite{kreibich:2010}, that require explicit interactions with the broadband
+consumer.  Recently, the requirement for accurate measurements, coupled with
+\ac{FCC}' initiated efforts to define data-driven standards, has led to the
+deployment of a number of large-scale measurement platforms that perform
+measurements using dedicated hardware probes not only from within the
+\ac{ISP}' network but also directly from the home gateway.
 
 In a recent study, sponsered by the \ac{FCC}, Sundaresan \emph{et al.}
 \cite{sundaresan:2011} have used such a measurement data from a swarm of
 deployed SamKnows probes to investigate the throughput and latency of access
-network links across multiple ISPs. in the United States. They have coupled
-this data with their own Bismark platform \cite{sundaresan:2012} to also
-investigate different traffic shaping policies enforced by the ISP and to
+network links across multiple \ac{ISP}s in the United States. They have
+coupled this data with their own Bismark platform \cite{sundaresan:2012} to
+investigate different traffic shaping policies enforced by the \ac{ISP} and to
 understand the bufferbloat phenomenon. The empirical findings of this study
 has recently been repraised by Canadi \emph{et al.} in \cite{canadi:2012}
 where they use crowdsourced data from \url{speedtest.net} to compare both
-results. The primary aim is to measure the performance and reliability of
-broadband access networks and facilitate the regulators with research findings
-to help them make policy decisions that eliminate the ISP' monopoly
+results. The primary aim of all these activities is to measure the performance
+and reliability of broadband access networks and facilitate the regulators
+with research findings to help them make policy decisions
 \cite{draft-schulzrinne-lmap-requirements-00}.  As a result, the focus is on
 defining metrics and implement measurement tests that help achieve this goal.
 
-In the past, we have performed an experimental evaluation of IPv6
-transitioning technologies to identify how well current applications and
-protocols interoperate with them \cite{vbajpai:2012}. Using a large-scale
-measurement platform we want to take this further and study the IPv6 evolution
-and its repercussions. We want to describe metrics and implement measurement
-tests that help us answer questions of the form:
+Using a large-scale measurement platform we want to take this further and
+study the evolution of the Internet and its repercussions. We want to define
+metrics and implement measurement tests that help us answer questions of the
+form:
 
 \begin{itemize}
-  \item \emph{How does the performance of IPv6 compare to that of IPv4 in real world?}
-  \item \emph{Can we identify deployment of \ac{CGN} from a gateway?}
-  \item \emph{Can we identify deployments of multiple layers of NAT from a gateway?}
-  \item \emph{How much do services centralize on core \ac{CDN}s?}
-  \item \emph{To what extend does the network experience depend on
-              localized data?}
+  \item \emph{How does the performance of IPv6 compare to that of IPv4 in the real world?}
+  \item \emph{Can we identify a \ac{CGN} from a home gateway?}
+  \item \emph{Can we identify multiple layers of NAT from a home gateway?}
+  \item \emph{How much do web services centralize on \ac{CDN}s?}
+  \item \emph{To what extend does the network experience depend on regionalization?}
 \end{itemize}
+
+In the past, we have performed an experimental evaluation of IPv6
+transitioning technologies to identify how well current applications and
+protocols interoperate with them \cite{vbajpai:2012}.
 
 %In our preliminary study, we have witnessed that a major portion of the
 %services in practicality centralize either on core content delivery networks
