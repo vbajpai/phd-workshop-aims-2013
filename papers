@@ -1,0 +1,124 @@
+Measurements:
+-------------
+
+Standardizing Large-Scale Measurement Platforms
+ACM CCR
+
+A YANG data model for Large-Scale Measurements
+Internet Draft
+
+Measuring Home Broadband Performance
+CACM, November 2012
+
+Revisiting Broadband Performance (ANRP)
+IMC, November 2012
+
+Measuring the Deployment of IPv6: Topology, Routing and Performance (ANRP)
+IMC, November 2012
+
+Inside Dropbox: Understanding Personal Cloud Storage Services (ANRP)
+IMC, November 2012
+
+Routing State Distance: A Path-based Metric for Network Analysis (ANRP)
+IMC, November 2012
+
+Detecting Third-Party Addresses in Traceroute IP Paths (ANRP)
+SIGCOMM, August 2012
+
+Last-mile IPv6 Teredo Tunnelling Perforamnce Evaluation
+Bachelors Thesis, May 2012
+
+ShaperProbe: End-to-End Detection of ISP Traffic Shaping using Active Methods
+IMC 2011
+
+Broadband Internet Performance: A View from the Gateway
+SIGCOMM, August 2011
+
+Glasnost: Enabling End Users to Detect Traffic Differentiation.
+USENIX NSDI 2010
+
+Reverse Traceroute
+USENIX NSDI 2010
+
+Measurement Lab: Overview and an Invitation to the Research Community
+SIGCOMM CCR, 2010
+
+Netalyzr: Illuminating the Edge Network
+IMC 2010
+
+Characterizing Residential Broadband Networks
+IMC 2007
+
+RFCs and Internet-Drafts:
+-------------------------
+
+A Reference Path and Measurement Points for LMAP
+January 2013
+
+A registry for commonly used metrics
+A registry for commonly used metrics. Independent registries
+January 2013
+
+Common YANG Data Types
+December 2012
+
+NETCONF Over Transport Layer Security (TLS)
+October 2012
+
+Large-Scale Measurement of Broadband Performance:  Use Cases,
+Architecture and Protocol Requirements
+September 2012
+
+Testing Eyeball Happiness, RFC 6556
+April 2012
+
+Happy Eyeballs: Success with Dual-Stack Hosts, RFC 6556
+April 2012
+
+
+Management:
+-----------
+
+Management of Resource Constrained Devices in the Internet of Things
+IEEE Communications Magazine, December 2012
+
+Network Configuration Management using NETCONF and YANG
+IEEE Communications Magazine, September 2010
+
+Future Internet = Content + Services + Management
+IEEE Communications Magazine, July 2009
+
+Protocol-Independent Data Modeling: Lessons Learned from the SMIng Project
+IEEE Communications Magazine, May 2008
+
+Key Research Challenges in Network Management
+IEEE Communications Magazine, October 2007
+
+Miscellaneous:
+-------------
+
+BonaFide: A Traffic Shaping Detection Tool for Mobile Networks
+IM, May 2013
+
+Locations vs Identities in Internet Content: Applying Information-Centric
+Principles in Today' Networks
+IEEE Communications Magazine, December 2012
+
+BufferBloat: What's Wrong with the Internet
+CACM, February 2012
+
+BufferBloat: Dark Buffers in the Internet
+CACM, January 2012
+
+Multipath: A New Control Architecture for the Internet
+CACM, January 2011
+
+Future Internet Architecture: Clean-Slate versus Evolutionary Research
+CACM, September 2010
+
+YAF: Yet Another Flowmeter
+USENIX LISA 2010
+
+Effective Traffic Measurement using ntop
+IEEE Communications Magazine, May 2000
+
