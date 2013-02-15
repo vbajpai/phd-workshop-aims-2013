@@ -1,34 +1,34 @@
-The curiosity to understand the evolution of the Internet from the user'
-vantage point started by establishing techniques to remotely probe the
-broadband access network. Dischinger \emph{et al.} in \cite{dischinger:2007},
-for instance, inject packet trains and use the responses received from
-residential gateway to infer the broadband link characteristics. This led to
-the development of a number of software-based solutions such as
-\texttt{netalyzr} \cite{kreibich:2010}, that require explicit interactions
-with the broadband consumer.  Recently, the requirement for accurate
-measurements, coupled with \ac{FCC}' initiated efforts to define data-driven
-standards, has led to the deployment of a number of large-scale measurement
-platforms that perform measurements using dedicated hardware probes not only
-from within the \ac{ISP}' network but also directly from the home gateway.
+The curiosity to understand the performance of the Internet from the user's
+vantage point let to the development of techniques to remotely probe broadband
+access networks. Dischinger \emph{et al.} in \cite{dischinger:2007}, for
+instance, inject packet trains and use the responses received from residential
+gateways to infer broadband link characteristics. This led to the development
+of a number of software-based solutions such as \texttt{netalyzr}
+\cite{kreibich:2010}, that require explicit interactions with the broadband
+customer. Recently, the requirement for accurate measurements, coupled with
+efforts initiated by regulators to define data-driven standards, has led to
+the deployment of a number of large-scale measurement platforms that perform
+measurements using dedicated hardware probes not only from within \ac{ISP}
+networks but also directly from home gateways.
 
 In a recent study, sponsered by the \ac{FCC}, Sundaresan \emph{et al.}
-\cite{sundaresan:2011} have used such a measurement data from a swarm of
-deployed SamKnows probes to investigate the throughput and latency of access
-network links across multiple \ac{ISP}s in the United States. They have
-coupled this data with their own Bismark platform \cite{sundaresan:2012} to
-investigate different traffic shaping policies enforced by the \ac{ISP} and to
+\cite{sundaresan:2011} have used measurement data from a swarm of deployed
+SamKnows probes to investigate the throughput and latency of access network
+links across multiple \ac{ISP}s in the United States. They have analyzed this
+data together with data from their own Bismark platform \cite{sundaresan:2012}
+to investigate different traffic shaping policies enforced by \ac{ISP}s and to
 understand the bufferbloat phenomenon. The empirical findings of this study
-has recently been repraised by Canadi \emph{et al.} in \cite{canadi:2012}
+have recently been repraised by Canadi \emph{et al.} in \cite{canadi:2012}
 where they use crowdsourced data from \url{speedtest.net} to compare both
 results. The primary aim of all these activities is to measure the performance
-and reliability of broadband access networks and facilitate the regulators
-with research findings to help them make policy decisions
-\cite{draft-schulzrinne-lmap-requirements-00}.  As a result, the focus is on
-defining metrics and implement measurement tests that help achieve this goal.
+(e.g., bandwidth, latency, jitter) and reliability of broadband access
+networks and facilitate the regulators with research findings to help them
+make policy decisions \cite{draft-schulzrinne-lmap-requirements-00}.
 
 Using a large-scale measurement platform we want to take this further and
-study the evolution of the Internet. We want to define metrics and implement
-measurement tests that help us answer questions of the form:
+study the impact of network infrastructure changes. We want to define metrics,
+implement measurement tests and data analysis tools that help us answer
+questions of the form:
 
 \begin{itemize}
   \item \emph{How does the performance of IPv6 compare to that of IPv4 in the real world?}
@@ -41,7 +41,7 @@ measurement tests that help us answer questions of the form:
 In the past, we have performed an experimental evaluation of IPv6
 transitioning technologies to identify how well current applications and
 protocols interoperate with them \cite{vbajpai:2012}. We are now participating
-in the Leone\footnote{\url{http://leone-project.eu}} project whose primary
-goal is to define metrics and implement tests that can asses the end-user
-quality of experience by analyzing data collected from several measurements
-running on SamKnows probes.
+in the Leone\footnote{\url{http://leone-project.eu}} project, whose primary
+goal is to define metrics and implement tests that can asses the end-user's
+quality of experience by analyzing data collected from measurements running on
+SamKnows probes.

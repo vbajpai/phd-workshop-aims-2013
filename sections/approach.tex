@@ -11,25 +11,25 @@ alongside DNS queries to DNS root servers.
 
 % measurement lab
 \ac{M-Lab} \cite{dovrolis:2010} is an open, distributed platform to deploy
-internet measurement tools. The measurement results are stored on Google'
+Internet measurement tools. The measurement results are stored on Google's
 infrastructure. The tools vary from measuring TCP throughput and available
 bandwidth to emulating clients to identify end-user traffic differentiation
 policies \cite{dischinger:2010, kanuparthy:2011} to performing reverse
 traceroute lookups from arbitrary destinations \cite{bassett:2010}.
 
 % leone
-The answers to the aforementioned research questions will only materialize
-with access to a large-scale measurement platform. We as partners of the Leone
-consortium, will leverage the infrastructure of our partners. We will define
-metrics particularly targetted to our research questions and complement them
-by implementing subsequent measurement tests. The developed measurement tests
-will be deployed not only in our partner \ac{ISP}'s network, but also in the
-already deployed SamKnows global infrastructure.  The SamKnows infrastructure
-already has several thousand deployed probes and will continue to grow during
-the project' lifetime. The data will be collected for a time long enough to be
-representative of a globally spanned network, devoid of localized anomalies.
-The collected data will be conglomerated from multiple measurement points and
-finally analyzed to uncover information needed to help us answer these
-questions. We have started with a study to assess the growth of IPv6 in the
-real world and have uncovered few insights that we discuss in the next
-section.
+It will only be possible to answer the aforementioned research questions with
+access to a large-scale measurement platform. As partners of the Leone
+consortium, we will leverage the infrastructure of our partners. We will
+define metrics particularly targetted to our research questions and complement
+them by implementing subsequent measurement tests. The developed measurement
+tests will be deployed in our partner's networks, but may also become part of
+SamKnows global infrastructure. The SamKnows infrastructure already has
+several thousand deployed probes and will continue to grow during the
+project's lifetime. The collected data will be conglomerated from multiple
+measurement points and finally analyzed to uncover information needed to help
+us answer these questions. This requires to develop data analysis algorithms
+that can integrate data from different data sources such as address block
+allocations from \ac{RIR}s or prefix and path information from BGP route
+views. We have started with a study to assess how the user experience is
+effected by the deployment of IPv6.
