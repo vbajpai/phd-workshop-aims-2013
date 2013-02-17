@@ -28,14 +28,15 @@ one that completes first.  In this pursuit, to determine whether applications
 will use IPv4 or IPv6 on a dual stacked service, we developed \texttt{happy},
 a simple TCP happy eyeballs probing tool. It uses non-blocking
 \texttt{connect(\ldots)} calls to concurrently establish connections to all
-endpoints of a service.  We have cross-compiled \texttt{happy} for the OpenWrt
-platform, so that the tool can run on SamKnows probes. In order to develop
-data-analysis tools, we have prepared an internal test-bed of multiple
-measurement points. The measurement points have different flavors of IPv4 and
-IPv6 connectivity ranging from native IPv4, native IPv6, IPv6 tunnel broker
-endpoints, Teredo and tunnelled IPv4. We used the top 100 DNS names compiled
-by \texttt{he.net}\footnote{\url{http://bgp.he.net/ipv6-progress-report.cgi}}
-and ran \texttt{happy} on them.
+endpoints of a service.  We have cross-compiled \texttt{happy} for the
+OpenWrt\footnote{\url{http://openwrt.org}} platform, so that the tool can run
+on SamKnows probes. In order to develop data-analysis tools, we have prepared
+an internal test-bed of multiple measurement points. The measurement points
+have different flavors of IPv4 and IPv6 connectivity ranging from native IPv4,
+native IPv6, IPv6 tunnel broker endpoints, Teredo and tunnelled IPv4. We used
+the top 100 DNS names compiled by
+\texttt{he.net}\footnote{\url{http://bgp.he.net/ipv6-progress-report.cgi}} and
+ran \texttt{happy} on them.
 
 \begin{figure}[t]
   \begin{minipage}[t]{0.50\textwidth}
