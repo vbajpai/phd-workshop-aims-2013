@@ -11,32 +11,11 @@ which can be in the order of seconds.
 \centering
 \includegraphics[width=1.0\textwidth]{figures/t28972-mean}
 \caption{Mean time to establish TCP connections to a list of web services. The
-measurement point is a virtual machine hosted at greatnet.de. It has IPv4
-connectivity via LamdaNet Communications [AS13237] and IPv6 connectivity via
-Teredo.}
+measurement point is a virtual machine hosted at \texttt{greatnet.de}. It
+has IPv4 connectivity via LamdaNet Communications [AS13237] and IPv6
+connectivity via Teredo.}
 \label{fig:t28972-mean}
 \end{figure}
-
-%\begin{figure}[h!]
-%\centering
-%\includegraphics[width=1.0\textwidth]{figures/unimator2-mean}
-%\caption{Native IPv4 and Teredo Tunnel}
-%\end{figure}
-
-%\begin{figure}[t]
-  %\begin{minipage}[t]{0.50\textwidth}
-    %\centering
-    %\resizebox*{1.0\textwidth}{!}{\includegraphics{figures/t28972-mean}}
-    %\caption{Native IPv4 and Teredo Tunnel}
-  %\end{minipage}
-  %\begin{minipage}[t]{0.50\textwidth}
-    %\centering
-    %\resizebox*{1.0\textwidth}{!}{\includegraphics{figures/unimator2-mean}}
-    %\caption{Native IPv4 and Native IPv6}
-  %\end{minipage}
-%\caption{\label{fig:happy-v4-v6-mean-std} Mean and Standard Deviations for
-%IPv4 and IPv6}
-%\end{figure}
 
 This noticeable degraded user experience can be subverted by implementing the
 happy eyeballs algorithm \cite{rfc6555} in applications. The algorithm
@@ -68,17 +47,9 @@ and ran \texttt{happy} on them.
     \resizebox*{1.0\textwidth}{!}{\includegraphics{figures/happy-v6cloud}}
   \end{minipage}
   \caption{\label{fig:v4-v6-cloud}An IPv4 (left) and IPv6 (right) aggregation
-cloud depicting how most of the services centralize on core content delivery
-networks and major cloud platforms (zoom in to see the details).}
+  cloud depicting how most of the services centralize on core \ac{CDN}s and
+  major cloud platforms (zoom in to see the details).}
 \end{figure}
-
-%A preliminary result comparing the preference of a happy-eyeballed application
-%to IPv6 and IPv4 from two measurement points is shown in Fig.
-%\ref{fig:happy-v4-v6-compete}. The initial results show that happy eyeballs
-%prevents IPv6 access to Facebook, with only a 20\% chance to get to Google
-%related services over a Teredo Tunnel. The results look more promising on a
-%native IPv6 connection. It is important to note that adhering to the happy
-%eyeballs recommendation, IPv6 endpoints are allowed a 300ms chance to succeed.
 
 A preliminary result comparing the mean time to establish a TCP connection to
 each of the services from one of the measurement points is shown in Fig.
@@ -93,16 +64,3 @@ the \texttt{whois} information for each of the endpoints from their \ac{RIR}
 seems to indicate that major portions of the services map to address blocks
 owned by organizations such as Google and Akamai Technologies as shown in Fig.
 \ref{fig:v4-v6-cloud}.
-
-%As much as it is important to define and implement new tests on these
-%measurement infrastructure, it is also equally pertinent to not only be able
-%to install, update and delete these tests but also configure the entire suite
-%of probes using a standardized protocol over the network. The \ac{NETCONF}
-%protocol \cite{rfc6241} is particularly designed to cater to this problem.
-%Towards this end, we have built a \ac{NETCONF} server for the OpenWRT platform
-%using the \texttt{libnetconf}
-%\footnote{\url{http://code.google.com/p/libnetconf/}} library and tested the
-%implementation using our NETCONF Python API \texttt{ncclient}
-%\cite{sbhushan:2009}. This will allow automated deployment of measurement
-%tests and remote management of their startup configurations.
-
