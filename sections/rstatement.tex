@@ -8,27 +8,25 @@ of a number of software-based solutions such as \texttt{netalyzr}
 customer. Recently, the requirement for accurate measurements, coupled with
 efforts initiated by regulators to define data-driven standards, has led to
 the deployment of a number of large-scale measurement platforms that perform
-measurements using dedicated hardware probes not only from within \ac{ISP}
-networks but also directly from home gateways.
+measurements using dedicated hardware probes not only from within ISP networks
+but also directly from home gateways.
 
-In a recent study, sponsered by the \ac{FCC}, Sundaresan \emph{et al.}
+In a recent study, sponsered by the FCC, Sundaresan \emph{et al.}
 \cite{sundaresan:2011} have used measurement data from a swarm of deployed
 SamKnows probes to investigate the throughput and latency of access network
-links across multiple \ac{ISP}s in the United States. They have analyzed this
-data together with data from their own Bismark platform \cite{sundaresan:2012}
-to investigate different traffic shaping policies enforced by \ac{ISP}s and to
-understand the bufferbloat phenomenon. The empirical findings of this study
-have recently been repraised by Canadi \emph{et al.} in \cite{canadi:2012}
-where they use crowdsourced data from \url{speedtest.net} to compare both
-results. The primary aim of all these activities is to measure the performance
-(e.g., bandwidth, latency, jitter) and reliability of broadband access
+links across multiple ISPs in the United States. They have analyzed this data
+together with data from their own Bismark platform to investigate different
+traffic shaping policies enforced by ISPs and to understand the bufferbloat
+phenomenon. The empirical findings of this study have recently been repraised
+by Canadi \emph{et al.} in \cite{canadi:2012} where they use crowdsourced data
+from \url{speedtest.net} to compare both results. The primary aim of all these
+activities is to measure the performance and reliability of broadband access
 networks and facilitate the regulators with research findings to help them
-make policy decisions \cite{draft-schulzrinne-lmap-requirements-00}.
-
-Using a large-scale measurement platform we want to take this further and
-study the impact of network infrastructure changes. We want to define metrics,
-implement measurement tests and data analysis tools that help us answer
-questions of the form:
+make policy decisions \cite{draft-schulzrinne-lmap-requirements-00}.  Using a
+large-scale measurement platform we want to take this further and study the
+impact of network infrastructure changes. We want to define metrics, implement
+measurement tests and data analysis tools that help us answer questions of the
+form:
 
 \begin{itemize}
   \item \emph{How does the performance of IPv6 compare to that of IPv4 in the real world?}
@@ -38,10 +36,9 @@ questions of the form:
   \item \emph{To what extend does the network experience depend on regionalization?}
 \end{itemize}
 
-In the past, we have performed an experimental evaluation of IPv6
-transitioning technologies to identify how well current applications and
-protocols interoperate with them \cite{vbajpai:2012}. We are now participating
-in the Leone\footnote{\url{http://leone-project.eu}} project, whose primary
-goal is to define metrics and implement tests that can asses the end-user's
-quality of experience by analyzing data collected from measurements running on
-SamKnows probes.
+In the past, we have performed an evaluation of IPv6 transitioning
+technologies to identify how well current applications and protocols
+interoperate with them \cite{vbajpai:2012}. We are now participating in the
+Leone\footnote{\url{http://leone-project.eu}} project, whose primary goal is
+to define metrics and implement tests that can asses the end-user's \ac{QoE}
+from measurements running on SamKnows probes.
