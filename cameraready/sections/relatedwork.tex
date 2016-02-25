@@ -1,0 +1,43 @@
+An interest to understand the evolution of the Internet from the user' vantage
+point started with establishing techniques to remotely probe the broadband
+links. Dischinger \emph{et al.} in \cite{dischinger:2007} for instance, inject
+packet trains and use the responses received from gateway to infer the
+broadband link characteristics. This led to development of a number of
+software-based solutions, \texttt{netalyzr} \cite{kreibich:2010}, for
+instance, that requires explicit interactions with the broadband consumer.
+Recently, the requirement for accurate measurements, coupled with \ac{FCC}'
+initiated efforts to define data-driven standards has led to the deployment of
+a number of large-scale measurement platforms that perform measurements using
+dedicated hardware probes not only from within the ISP' network but also
+directly from the home gateway.
+
+% samknows and bismark
+SamKnows \footnote{\url{http://www.samknows.com}} specializes in such
+measurements to study the performance of broadband access networks. It
+functions by deploying dedicated hardware probes in the home gateway, that
+perform active measurements when the user is less aggresively using the
+network. In a recent study, sponsered by the \ac{FCC}, Sundaresan \emph{et
+al.} \cite{sundaresan:2011} have used this measurement data to investigate the
+throughput and latency of access network links across multiple ISP's. in the
+United States. They have coupled this data with their own Bismark platform
+\cite{sundaresan:2012} to investigate different traffic shaping policies
+enforced by the ISP and understand the bufferbloat phenomenon
+\cite{gettys:2012}. The empirical findings of this study has recently been
+repraised by Canadi \emph{et al.} in \cite{canadi:2012} where they use
+crowdsourced data from \url{speedtest.net} to compare both results.
+
+% ripe atlas
+Ripe Atlas \footnote{\url{https://atlas.ripe.net}} is another independent
+measurement infrastructure deployed by \ac{RIPE NCC}. It consists of thousands
+of probes distributed around the globe that perform \ac{RTT} and traceroute
+measurements to a number of preconfigured destinations alongside DNS queries
+to root DNS servers.
+
+% measurement lab
+\ac{M-Lab} \cite{dovrolis:2010} is an open, distributed platform to deploy
+internet measurement tools and the resulting measurement data on Google'
+storage infrastructure. The tools vary from measuring TCP throughput and
+available bandwidth to emulating clients to identify end-user traffic
+differentiation policies \cite{dischinger:2010, kanuparthy:2011} to performing
+reverse traceroute lookups from arbitrary destinations \cite{bassett:2010}.
+All of the collected data is available in the public domain.

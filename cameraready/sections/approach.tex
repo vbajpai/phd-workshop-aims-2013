@@ -1,0 +1,32 @@
+% samknows and bismark
+SamKnows specializes in the deployment of hardware-based probes that perform
+measurements to assess the performance of broadband access networks. The
+probes function by performing active measurements when the user is not
+aggressively using the network.  RIPE Atlas is another independent measurement
+infrastructure deployed by the RIPE NCC. It consists of hardware probes
+distributed around the globe that perform RTT and traceroute measurements to
+preconfigured destinations alongside DNS queries to DNS root servers.
+
+% measurement lab
+\ac{M-Lab} \cite{dovrolis:2010} is an open, distributed platform to deploy
+Internet measurement tools. The measurement results are stored on Google's
+infrastructure. The tools vary from measuring TCP throughput and available
+bandwidth to emulating clients to identify end-user traffic differentiation
+policies \cite{dischinger:2010, kanuparthy:2011} to performing reverse
+traceroute lookups from arbitrary destinations \cite{bassett:2010}.
+
+% leone
+It will only be possible to answer the aforementioned research questions with
+access to a large-scale measurement platform. As partners of the Leone
+consortium, we will leverage the infrastructure of our partners. We will
+define metrics targeted to our research questions and complement them by
+implementing measurement tests. The developed tests will be deployed in our
+partner's networks, but may also become part of SamKnows global
+infrastructure, which has several thousand deployed probes and will continue
+to grow during the project's lifetime. The collected data will be
+conglomerated from multiple \ac{MA}s and analyzed to uncover information
+needed to help us answer these questions. This requires to develop data
+analysis algorithms that can integrate data from different data sources such
+as address block allocations from \ac{RIR}s or prefix and path information
+from BGP route views. In this pursuit, we have started with a study to assess
+how the user experience is effected by the deployment of IPv6.

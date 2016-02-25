@@ -1,0 +1,86 @@
+\documentclass[a4paper]{llncs}
+
+\usepackage{amssymb}
+\setcounter{tocdepth}{3}
+\usepackage{graphicx}
+
+\usepackage{url}
+\urldef{\mailsa}\path|{v.bajpai, j.schoenwaelder}@jacobs-university.de|
+\newcommand{\keywords}[1]{\par\addvspace\baselineskip
+\noindent\keywordname\enspace\ignorespaces#1}
+
+% added by Vaibhav
+%----------------------------------------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[nolist]{acronym}
+\renewcommand{\ttdefault}{cmtt}
+\usepackage{cite}
+%----------------------------------------------------------------------
+
+
+\begin{acronym}
+  \acro{RIR}{Regional Internet Registry}
+  \acro{NETCONF}{Network Configuration}
+  \acro{CGN}{Carrier-Grade NAT}
+  \acro{NAT}{Network Address Translation}
+  \acro{FCC}{Federal Communications Commission}
+  \acro{RIPE NCC}{RIPE Network Coordination Centre}
+  \acro{RTT}{round-trip time}
+  \acro{M-Lab}{Measurement Lab}
+  \acro{CDN}{Content Delivery Network}
+  \acro{ISP}{Internet Service Provider}
+  \acro{MA}{Measurement Agent}
+  \acro{QoE}{Quality of Experience}
+\end{acronym}
+
+\begin{document}
+
+\mainmatter  % start of an individual contribution
+
+% first the title is needed
+\title{Understanding the Impact of Network Infrastructure Changes using
+Large-Scale Measurement Platforms}
+
+
+\author{Vaibhav Bajpai \and Jürgen Schönwälder%
+\thanks{This work was supported by the European Community’s Seventh Framework
+Programme (FP7/2007-2013) grant no. 317647 (Leone)}}
+\institute{Computer Science, Jacobs University Bremen, Germany\\
+\mailsa}
+\maketitle
+
+\begin{abstract}
+
+A number of large-scale measurement platforms have emerged in the last few
+years. These platforms have deployed thousands of probes within the access,
+backbone networks and at residential gateways.  Their primary goal is to
+measure the performance of broadband access networks and to help regulators
+sketch better policy decisions. We want to expand the goal further by using
+large-scale measurement platforms to understand the impact of network
+infrastructure changes.
+
+\end{abstract}
+
+
+% sections
+%----------------------------------------------------------------------
+\section{Research Statement}
+\input{sections/rstatement}\label{sec:rstatement}
+\section{Proposed Approach}
+\input{sections/approach}\label{sec:approach}
+\section{Preliminary Results}
+\input{sections/preliminaryresults}\label{sec:preliminaryresults}
+\section{Conclusion}
+\input{sections/conclusion}\label{sec:conclusion}
+%----------------------------------------------------------------------
+
+
+
+% bibliography
+%----------------------------------------------------------------------
+\bibliographystyle{splncs}
+\bibliography{index}
+%----------------------------------------------------------------------
+
+\end{document}
